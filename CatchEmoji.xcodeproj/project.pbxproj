@@ -11,6 +11,16 @@
 		E7E3CD6D28A06AB30095F07A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CD6C28A06AB30095F07A /* ContentView.swift */; };
 		E7E3CD6F28A06AB60095F07A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7E3CD6E28A06AB60095F07A /* Assets.xcassets */; };
 		E7E3CD7228A06AB60095F07A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7E3CD7128A06AB60095F07A /* Preview Assets.xcassets */; };
+		E7E3CDA228A07D0F0095F07A /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDA128A07D0F0095F07A /* GameScreen.swift */; };
+		E7E3CDA428A07DD00095F07A /* InstructionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDA328A07DD00095F07A /* InstructionScreen.swift */; };
+		E7E3CDA928A07FDA0095F07A /* Navigation in Frameworks */ = {isa = PBXBuildFile; productRef = E7E3CDA828A07FDA0095F07A /* Navigation */; };
+		E7E3CDAD28A0806F0095F07A /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDAC28A0806F0095F07A /* Mode.swift */; };
+		E7E3CDAF28A081770095F07A /* ScreenMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDAE28A081770095F07A /* ScreenMaker.swift */; };
+		E7E3CDB128A081A20095F07A /* TypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDB028A081A20095F07A /* TypeViewModel.swift */; };
+		E7E3CDB528A082CE0095F07A /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDB428A082CE0095F07A /* MenuScreen.swift */; };
+		E7E3CDB828A088230095F07A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDB728A088230095F07A /* View.swift */; };
+		E7E3CDBA28A088B60095F07A /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDB928A088B60095F07A /* ResultScreen.swift */; };
+		E7E3CDBC28A088D60095F07A /* ScoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDBB28A088D60095F07A /* ScoreScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		E7E3CD6C28A06AB30095F07A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7E3CD6E28A06AB60095F07A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7E3CD7128A06AB60095F07A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7E3CDA128A07D0F0095F07A /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
+		E7E3CDA328A07DD00095F07A /* InstructionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionScreen.swift; sourceTree = "<group>"; };
+		E7E3CDA628A07FB20095F07A /* Navigation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Navigation; sourceTree = "<group>"; };
+		E7E3CDAC28A0806F0095F07A /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		E7E3CDAE28A081770095F07A /* ScreenMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenMaker.swift; sourceTree = "<group>"; };
+		E7E3CDB028A081A20095F07A /* TypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewModel.swift; sourceTree = "<group>"; };
+		E7E3CDB428A082CE0095F07A /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
+		E7E3CDB728A088230095F07A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		E7E3CDB928A088B60095F07A /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
+		E7E3CDBB28A088D60095F07A /* ScoreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E3CDA928A07FDA0095F07A /* Navigation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +56,10 @@
 		E7E3CD5E28A06AB30095F07A = {
 			isa = PBXGroup;
 			children = (
+				E7E3CDA528A07FB20095F07A /* Packages */,
 				E7E3CD6928A06AB30095F07A /* CatchEmoji */,
 				E7E3CD6828A06AB30095F07A /* Products */,
+				E7E3CDA728A07FDA0095F07A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +74,13 @@
 		E7E3CD6928A06AB30095F07A /* CatchEmoji */ = {
 			isa = PBXGroup;
 			children = (
+				E7E3CDB628A088120095F07A /* extentions */,
+				E7E3CDB328A082BA0095F07A /* MenuScreen */,
+				E7E3CDAB28A080630095F07A /* Models */,
+				E7E3CDAA28A0805B0095F07A /* ViewModels */,
+				E7E3CD7C28A06B970095F07A /* ResultScreen */,
+				E7E3CD7A28A06B650095F07A /* ScoreScreen */,
+				E7E3CD7828A06B3D0095F07A /* GameScreen */,
 				E7E3CD6A28A06AB30095F07A /* CatchEmojiApp.swift */,
 				E7E3CD6C28A06AB30095F07A /* ContentView.swift */,
 				E7E3CD6E28A06AB60095F07A /* Assets.xcassets */,
@@ -65,6 +95,79 @@
 				E7E3CD7128A06AB60095F07A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7E3CD7828A06B3D0095F07A /* GameScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3CDA128A07D0F0095F07A /* GameScreen.swift */,
+				E7E3CDA328A07DD00095F07A /* InstructionScreen.swift */,
+				E7E3CDAE28A081770095F07A /* ScreenMaker.swift */,
+			);
+			path = GameScreen;
+			sourceTree = "<group>";
+		};
+		E7E3CD7A28A06B650095F07A /* ScoreScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3CDBB28A088D60095F07A /* ScoreScreen.swift */,
+			);
+			path = ScoreScreen;
+			sourceTree = "<group>";
+		};
+		E7E3CD7C28A06B970095F07A /* ResultScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3CDB928A088B60095F07A /* ResultScreen.swift */,
+			);
+			path = ResultScreen;
+			sourceTree = "<group>";
+		};
+		E7E3CDA528A07FB20095F07A /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3CDA628A07FB20095F07A /* Navigation */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		E7E3CDA728A07FDA0095F07A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7E3CDAA28A0805B0095F07A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3CDB028A081A20095F07A /* TypeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E7E3CDAB28A080630095F07A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3CDAC28A0806F0095F07A /* Mode.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E7E3CDB328A082BA0095F07A /* MenuScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3CDB428A082CE0095F07A /* MenuScreen.swift */,
+			);
+			path = MenuScreen;
+			sourceTree = "<group>";
+		};
+		E7E3CDB628A088120095F07A /* extentions */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3CDB728A088230095F07A /* View.swift */,
+			);
+			path = extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +186,9 @@
 			dependencies = (
 			);
 			name = CatchEmoji;
+			packageProductDependencies = (
+				E7E3CDA828A07FDA0095F07A /* Navigation */,
+			);
 			productName = CatchEmoji;
 			productReference = E7E3CD6728A06AB30095F07A /* CatchEmoji.app */;
 			productType = "com.apple.product-type.application";
@@ -137,7 +243,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E3CDB528A082CE0095F07A /* MenuScreen.swift in Sources */,
+				E7E3CDAF28A081770095F07A /* ScreenMaker.swift in Sources */,
+				E7E3CDA428A07DD00095F07A /* InstructionScreen.swift in Sources */,
+				E7E3CDAD28A0806F0095F07A /* Mode.swift in Sources */,
+				E7E3CDB128A081A20095F07A /* TypeViewModel.swift in Sources */,
+				E7E3CDB828A088230095F07A /* View.swift in Sources */,
+				E7E3CDBA28A088B60095F07A /* ResultScreen.swift in Sources */,
+				E7E3CDBC28A088D60095F07A /* ScoreScreen.swift in Sources */,
 				E7E3CD6D28A06AB30095F07A /* ContentView.swift in Sources */,
+				E7E3CDA228A07D0F0095F07A /* GameScreen.swift in Sources */,
 				E7E3CD6B28A06AB30095F07A /* CatchEmojiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +388,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,8 +418,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +456,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E7E3CDA828A07FDA0095F07A /* Navigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Navigation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7E3CD5F28A06AB30095F07A /* Project object */;
 }
