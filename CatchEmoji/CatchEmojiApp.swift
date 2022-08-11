@@ -9,6 +9,13 @@ import SwiftUI
 
 @main
 struct CatchEmojiApp: App {
+    @Configurated var config: ()
+    
+    init() {
+        config
+        //Configurator.register()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

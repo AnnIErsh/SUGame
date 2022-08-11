@@ -9,8 +9,10 @@ import SwiftUI
 import Navigation
 
 struct ContentView: View {
-    @State var selected: Mode = Mode.play
+    @State var selected: Mode = Mode.intro
     @State private var isPresented = false
+    @ObservedObject var emojiViewModel: EmojiViewModel = .init()
+    @ObservedObject var route = NavigationViewModel()
     
     var body: some View {
         ZStack(alignment: .topTrailing, content: {
@@ -22,9 +24,16 @@ struct ContentView: View {
     @ViewBuilder var content: some View {
         Navigation(transition: Transition.custom(.slide)) {
             ScreenMaker(selected: $selected)
-            .padding()
+            //.padding()
         }
-        Button("Open Menu") {
+        .onAppear {
+            
+            emojiViewModel.prepareData()
+        }
+        .environmentObject(emojiViewModel)
+        .environmentObject(route)
+        
+        Button("Menu") {
             isPresented.toggle()
         }
         .dynamicTypeSize(.small)

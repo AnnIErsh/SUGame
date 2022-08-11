@@ -11,7 +11,7 @@ import SwiftUI
 
 struct MenuScreen: View {
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var route = NavigationViewModel()
+    @EnvironmentObject var route: NavigationViewModel
     @Binding var selected: Mode
     @State private var selectedRow: Int?
     @Modes private var modes

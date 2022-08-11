@@ -19,6 +19,8 @@ final class TypeViewModel: ObservableObject {
     @ViewBuilder
     func makeScreen(_ type: Mode) -> some View {
         switch type {
+        case .intro:
+            InstructionScreen()
         case .play:
             GameScreen()
         case .result:
