@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Emoji: Hashable, Codable {
     let name: String
@@ -23,11 +24,28 @@ struct Emoji: Hashable, Codable {
     }
 }
 
-struct Emojies: Codable {
-    var emojies: [Emoji]
-    
-    enum CodingKeys: String, CodingKey {
-        case emojies
+struct Category {
+    let name: String
+    let symbol: String
+}
+
+struct CategoryData {
+    static let categories: [Category] = [
+        Category(name: "smileys and people", symbol: "😀"),
+        Category(name: "animals and nature", symbol: "🐻"),
+        Category(name: "food and drink", symbol: "🍔"),
+        Category(name: "travel and places", symbol: "🚘"),
+        Category(name: "activities", symbol: "⚽️"),
+        Category(name: "objects", symbol: "💡"),
+        Category(name: "symbols", symbol: "🔣"),
+        Category(name: "flags", symbol: "🏳️"),
+    ]
+}
+
+@propertyWrapper
+struct Categories {
+    var wrappedValue: [Category] {
+        return CategoryData.categories
     }
 }
 

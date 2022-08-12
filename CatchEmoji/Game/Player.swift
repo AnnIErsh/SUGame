@@ -9,11 +9,24 @@ import Foundation
 import SpriteKit
 
 class Player: SKSpriteNode {
+    
+    var category: Category? {
+        didSet {
+            label.text = category?.symbol
+        }
+    }
+    
+    var label = SKLabelNode()
+    
     func prepare(area: CGSize) {
         self.position = CGPoint(x: area.width * 0.5 , y: area.height * 0.1)
-        let size = CGSize(width: self.size.width,
-                          height: self.size.height / 20)
-        self.physicsBody = SKPhysicsBody(rectangleOf: size)
+        self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
+        label.fontSize = self.size.height - 20
+        label.verticalAlignmentMode = .center
+        label.horizontalAlignmentMode = .center
+        label.fontColor = .black
+        self.addChild(label)
+       
     }
     
     func handleContact() {

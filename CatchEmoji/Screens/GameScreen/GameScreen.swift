@@ -25,9 +25,6 @@ struct GameScreen: View {
     var body: some View {
         ZStack {
             sprite
-            VStack {
-                Text("Game")
-            }
         }.background(alignment: .top) {
             Rectangle()
                 .fill(Color.blue)

@@ -24,9 +24,9 @@ extension GameScene: SKPhysicsContactDelegate {
 
         if ((firstBody.categoryBitMask & Contact.object != 0) &&
             (secondBody.categoryBitMask & Contact.projectile != 0)) {
-            if let ball = firstBody.node as? SKSpriteNode,
+            if let ball = firstBody.node as? EmojiObj,
                let _ = secondBody.node as? SKSpriteNode {
-                contactWithObject(ball: ball)
+                contactWithObject(object: ball)
             }
         }
     }

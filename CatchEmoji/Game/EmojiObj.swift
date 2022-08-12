@@ -10,8 +10,11 @@ import SpriteKit
 
 class EmojiObj: SKSpriteNode {
     
+    var category: Emoji?
+    
     func prepareEmoji(emoji: Emoji?) {
         let text = emoji?.unicode.randomElement()
+        category = emoji
         if let text = text {
             let char = convertEmoji(string: text)
             let label = SKLabelNode(text: char)
