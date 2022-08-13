@@ -17,10 +17,16 @@ class Player: SKSpriteNode {
     }
     
     var label = SKLabelNode()
+    private let basket = SKLabelNode(text: "🗑")
+    //🛒
     
     func prepare(area: CGSize) {
         self.position = CGPoint(x: area.width * 0.5 , y: area.height * 0.1)
         self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
+        basket.fontSize = self.size.height * 1.2
+        basket.verticalAlignmentMode = .center
+        basket.horizontalAlignmentMode = .center
+        self.addChild(basket)
         label.fontSize = self.size.height - 20
         label.verticalAlignmentMode = .center
         label.horizontalAlignmentMode = .center

@@ -6,10 +6,35 @@
 //
 
 import SwiftUI
+import UI
 
 struct ResultScreen: View {
+    @ObservedObject var playerViewModel = PlayerViewModel()
+    
     var body: some View {
-        Text("Result")
+        ZStack {
+            Color.colors[1]
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                Text("Results").modifier(ListStyle())
+                    .padding()
+                List {
+                    Section("Date") {
+                        ForEach(playerViewModel.results ?? []) { i in
+                            HStack {
+                                Text(i.date, style: .date)
+                                Spacer()
+                                Text("\(i.score)")
+                            }
+                        }
+                    }
+                    .modifier(ListStyle())
+                }
+                .modifier(ListStyle())
+                .listStyle(.plain)
+                .padding()
+            }
+        }
     }
 }
 

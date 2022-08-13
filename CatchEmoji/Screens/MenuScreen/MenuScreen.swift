@@ -8,6 +8,7 @@
 import Foundation
 import Navigation
 import SwiftUI
+import UI
 
 struct MenuScreen: View {
     @Environment(\.presentationMode) var presentationMode
@@ -26,19 +27,18 @@ struct MenuScreen: View {
                         selectedRow = i
                         pushScreen(index: i)
                     }
+                    .buttonStyle(ButtonStyles())
                     .tag(modes[i])
-                    .font(.largeTitle)
-                    .foregroundColor(.purple)
                     .opacity(
                         selectedRow == i ? 0.1 : 1
                     )
-                    .frame(maxWidth: .infinity)
+                    //.frame(maxWidth: .infinity)
                     .padding()
                 }
                 Button("Dismiss") {
                     presentationMode.wrappedValue.dismiss()
                 }
-                .foregroundColor(.black)
+                .modifier(TextStyle())
                 .padding()
             }
         }

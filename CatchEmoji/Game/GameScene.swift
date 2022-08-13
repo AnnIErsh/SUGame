@@ -38,7 +38,7 @@ class GameScene: SKScene {
     private var area = CGRect()
     private var sound = Sound.url
     let objSize = CGSize(width: 60, height: 60)
-    let player: Player = Player(color: .white, size: CGSize(width: 60, height: 60))
+    let player: Player = Player(color: .clear, size: CGSize(width: 60, height: 60))
     
     override init(size: CGSize) {
         super.init(size: size)
@@ -112,7 +112,7 @@ class GameScene: SKScene {
         run(SKAction.repeatForever(
             SKAction.sequence([
                 SKAction.run(handleGroup),
-                SKAction.wait(forDuration: 10)
+                SKAction.wait(forDuration: 20)
             ])
         ))
     }
@@ -128,7 +128,7 @@ class GameScene: SKScene {
     func contactWithObject(object: EmojiObj) {
         //run(SKAction.playSoundFileNamed("audio/sound.mp3", waitForCompletion: false))
         if (object.category?.category == category.text) {
-            count += 1
+            count += 10
             print("catch: ", object.category?.name as Any)
         }
         else {

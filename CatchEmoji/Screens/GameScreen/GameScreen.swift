@@ -13,7 +13,9 @@ struct GameScreen: View {
     
     private var gameScene: GameScene = {
         let scene = GameScene(size: UIScreen.main.bounds.size)
-        scene.backgroundColor = UIColor.green
+        //IColor(Color(hex: 0xd8cee6))
+        let color = UIColor.white
+        scene.backgroundColor = color
         return scene
     }()
     
@@ -27,7 +29,7 @@ struct GameScreen: View {
             sprite
         }.background(alignment: .top) {
             Rectangle()
-                .fill(Color.blue)
+                .fill(Color.clear)
         }
         .ignoresSafeArea()
     }

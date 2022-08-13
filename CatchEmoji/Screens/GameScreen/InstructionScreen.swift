@@ -7,20 +7,28 @@
 
 import SwiftUI
 import Navigation
+import UI
 
 struct InstructionScreen: View {
     @EnvironmentObject var route: NavigationViewModel
-    
     var body: some View {
         ZStack {
-            Color.white
+            Color.colors[2]
                 .edgesIgnoringSafeArea(.all)
-            Button("Start") {
-                route.pop()
-                route.push(screeView: GameScreen().lazy.toAnyView())
+            VStack {
+                Text("Catch Emoji ☻Game☻").modifier(TextStyle())
+                    .multilineTextAlignment(.center)
+                    .padding(2)
+                Text("🗑").modifier(TextStyle())
+                    .multilineTextAlignment(.center)
+                Button("Start") {
+                    route.pop()
+                    route.push(screeView: GameScreen().lazy.toAnyView())
+                }
+                .buttonStyle(ButtonStyles())
+                .padding()
+                .background(.ultraThickMaterial, in: Capsule())
             }
-            .foregroundColor(.black)
-            .padding()
         }
     }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Navigation
+import UI
 
 struct ContentView: View {
     @State var selected: Mode = Mode.intro
@@ -36,6 +37,7 @@ struct ContentView: View {
         Button("Menu") {
             isPresented.toggle()
         }
+        .buttonStyle(MenuStyle())
         .dynamicTypeSize(.small)
         .padding(.trailing)
         .showMenu(isPresented: $isPresented,

@@ -25,7 +25,7 @@ final class TypeViewModel: ObservableObject {
             GameScreen()
         case .result:
             ResultScreen()
-        case .score:
+        case .info:
             ScoreScreen()
         }
     }

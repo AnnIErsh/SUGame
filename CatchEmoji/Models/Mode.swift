@@ -8,9 +8,9 @@
 import Foundation
 
 enum Mode: String, CaseIterable {
-    case result = "Result"
+    case result = "Results"
     case play = "Play"
-    case score = "Leaderboard"
+    case info = "Info"
     case intro = "Intro"
 }
 

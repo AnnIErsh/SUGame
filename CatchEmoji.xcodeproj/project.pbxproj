@@ -40,6 +40,9 @@
 		E7E3CDBA28A088B60095F07A /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDB928A088B60095F07A /* ResultScreen.swift */; };
 		E7E3CDBC28A088D60095F07A /* ScoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDBB28A088D60095F07A /* ScoreScreen.swift */; };
 		E7E3CDC028A08E060095F07A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3CDBF28A08E060095F07A /* GameScene.swift */; };
+		E7FC893D28A73AD300D64539 /* UI in Frameworks */ = {isa = PBXBuildFile; productRef = E7FC893C28A73AD300D64539 /* UI */; };
+		E7FC894928A75D4000D64539 /* PlayerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FC894828A75D4000D64539 /* PlayerResult.swift */; };
+		E7FC894B28A75D8C00D64539 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FC894A28A75D8C00D64539 /* PlayerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,9 @@
 		E7E3CDB928A088B60095F07A /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
 		E7E3CDBB28A088D60095F07A /* ScoreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreScreen.swift; sourceTree = "<group>"; };
 		E7E3CDBF28A08E060095F07A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		E7FC893B28A73AB800D64539 /* UI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UI; sourceTree = "<group>"; };
+		E7FC894828A75D4000D64539 /* PlayerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerResult.swift; sourceTree = "<group>"; };
+		E7FC894A28A75D8C00D64539 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7FC893D28A73AD300D64539 /* UI in Frameworks */,
 				E7E3CDA928A07FDA0095F07A /* Navigation in Frameworks */,
 				E784D45528A2E9DA00A35937 /* Network in Frameworks */,
 				E784D47128A2FD9C00A35937 /* Data in Frameworks */,
@@ -189,6 +196,7 @@
 				E7E3CDA628A07FB20095F07A /* Navigation */,
 				E784D45328A2E9C800A35937 /* Network */,
 				E784D46F28A2FD8600A35937 /* Data */,
+				E7FC893B28A73AB800D64539 /* UI */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 				E7E3CDB028A081A20095F07A /* TypeViewModel.swift */,
 				E784D45D28A2F06500A35937 /* EmojiViewModel.swift */,
 				E7C3219D28A44D2A00EB0342 /* RandomViewModel.swift */,
+				E7FC894A28A75D8C00D64539 /* PlayerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -217,6 +226,7 @@
 				E784D44828A1D78A00A35937 /* Sound.swift */,
 				E784D44C28A2D91D00A35937 /* Contact.swift */,
 				E784D44E28A2DC9700A35937 /* Emoji.swift */,
+				E7FC894828A75D4000D64539 /* PlayerResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,6 +291,7 @@
 				E7E3CDA828A07FDA0095F07A /* Navigation */,
 				E784D45428A2E9DA00A35937 /* Network */,
 				E784D47028A2FD9C00A35937 /* Data */,
+				E7FC893C28A73AD300D64539 /* UI */,
 			);
 			productName = CatchEmoji;
 			productReference = E7E3CD6728A06AB30095F07A /* CatchEmoji.app */;
@@ -357,11 +368,13 @@
 				E784D44928A1D78A00A35937 /* Sound.swift in Sources */,
 				E784D45C28A2F01100A35937 /* URL.swift in Sources */,
 				E7E3CDC028A08E060095F07A /* GameScene.swift in Sources */,
+				E7FC894B28A75D8C00D64539 /* PlayerViewModel.swift in Sources */,
 				E7E3CDBA28A088B60095F07A /* ResultScreen.swift in Sources */,
 				E7E3CDBC28A088D60095F07A /* ScoreScreen.swift in Sources */,
 				E7E3CD6D28A06AB30095F07A /* ContentView.swift in Sources */,
 				E7E3CDA228A07D0F0095F07A /* GameScreen.swift in Sources */,
 				E784D46928A2F8A500A35937 /* EmojiModel.xcdatamodeld in Sources */,
+				E7FC894928A75D4000D64539 /* PlayerResult.swift in Sources */,
 				E7C3219A28A4397600EB0342 /* Player.swift in Sources */,
 				E7E3CD6B28A06AB30095F07A /* CatchEmojiApp.swift in Sources */,
 			);
@@ -579,6 +592,10 @@
 		E7E3CDA828A07FDA0095F07A /* Navigation */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Navigation;
+		};
+		E7FC893C28A73AD300D64539 /* UI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UI;
 		};
 /* End XCSwiftPackageProductDependency section */
 
