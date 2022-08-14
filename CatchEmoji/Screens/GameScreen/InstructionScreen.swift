@@ -11,6 +11,7 @@ import UI
 
 struct InstructionScreen: View {
     @EnvironmentObject var route: NavigationViewModel
+    @State var selected: Mode = .play
     var body: some View {
         ZStack {
             Color.colors[2]

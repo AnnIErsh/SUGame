@@ -19,7 +19,7 @@ struct ContentView: View {
         ZStack(alignment: .topTrailing, content: {
             content
         })
-        .environmentObject(NavigationViewModel())
+        .environmentObject(route)
     }
     
     @ViewBuilder var content: some View {
@@ -28,12 +28,10 @@ struct ContentView: View {
             //.padding()
         }
         .onAppear {
-            
             emojiViewModel.prepareData()
         }
         .environmentObject(emojiViewModel)
         .environmentObject(route)
-        
         Button("Menu") {
             isPresented.toggle()
         }

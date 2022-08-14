@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E76F540328A88FBB006E7E90 /* SpeedTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76F540228A88FBB006E7E90 /* SpeedTime.swift */; };
 		E784D44728A1D5F900A35937 /* audio in Resources */ = {isa = PBXBuildFile; fileRef = E784D44628A1D5F900A35937 /* audio */; };
 		E784D44928A1D78A00A35937 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784D44828A1D78A00A35937 /* Sound.swift */; };
 		E784D44B28A1DC9C00A35937 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784D44A28A1DC9C00A35937 /* Game.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E76F540228A88FBB006E7E90 /* SpeedTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTime.swift; sourceTree = "<group>"; };
 		E784D44628A1D5F900A35937 /* audio */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = audio; path = CatchEmoji/audio; sourceTree = SOURCE_ROOT; };
 		E784D44828A1D78A00A35937 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		E784D44A28A1DC9C00A35937 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				E784D44C28A2D91D00A35937 /* Contact.swift */,
 				E784D44E28A2DC9700A35937 /* Emoji.swift */,
 				E7FC894828A75D4000D64539 /* PlayerResult.swift */,
+				E76F540228A88FBB006E7E90 /* SpeedTime.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				E784D46628A2F44700A35937 /* InjectedWrapper.swift in Sources */,
 				E784D46E28A2FBAF00A35937 /* Entity+CoreDataProperties.swift in Sources */,
 				E784D46228A2F42900A35937 /* Configurator.swift in Sources */,
+				E76F540328A88FBB006E7E90 /* SpeedTime.swift in Sources */,
 				E7C3219C28A4398700EB0342 /* EmojiObj.swift in Sources */,
 				E784D44F28A2DC9700A35937 /* Emoji.swift in Sources */,
 				E784D45E28A2F06500A35937 /* EmojiViewModel.swift in Sources */,
