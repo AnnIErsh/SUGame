@@ -74,5 +74,4 @@ final class EmojiViewModel: ObservableObject {
     func cleanEmojies() {
         allEmojies = []
     }
-    
 }

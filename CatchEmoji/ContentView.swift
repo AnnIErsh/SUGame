@@ -10,16 +10,18 @@ import Navigation
 import UI
 
 struct ContentView: View {
-    @State var selected: Mode = Mode.intro
+    @State var selected: Mode = Mode.play
     @State private var isPresented = false
     @ObservedObject var emojiViewModel: EmojiViewModel = .init()
-    @ObservedObject var route = NavigationViewModel()
+    @ObservedObject var route: NavigationViewModel = .init()
+    @ObservedObject var actionViewModel: ActionViewModel = .init()
     
     var body: some View {
         ZStack(alignment: .topTrailing, content: {
             content
         })
         .environmentObject(route)
+        .environmentObject(actionViewModel)
     }
     
     @ViewBuilder var content: some View {
@@ -31,9 +33,9 @@ struct ContentView: View {
             emojiViewModel.prepareData()
         }
         .environmentObject(emojiViewModel)
-        .environmentObject(route)
         Button("Menu") {
             isPresented.toggle()
+            actionViewModel.gameIsPaused()
         }
         .buttonStyle(MenuStyle())
         .dynamicTypeSize(.small)

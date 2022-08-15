@@ -19,16 +19,19 @@ struct SpeedTime {
             minMove <= 1.00 ? minMove = 1.00 : nil
         }
     }
+    
     var maxMove: Double = 6.00 {
         didSet {
             maxMove <= 2.00 ? maxMove = 2.00 : nil
         }
     }
+    
     var spawnTime: Double = 1.00 {
         didSet {
             spawnTime <= 0.10 ? spawnTime = 0.10 : nil
         }
     }
+    
     var categoryTime: Double = 20.00 {
         didSet {
             categoryTime <= 3 ? categoryTime = 3 : nil
@@ -36,16 +39,9 @@ struct SpeedTime {
     }
         
     mutating func checkLimits() {
-        minMove -= 0.2
-        maxMove -= 0.2
+        minMove -= 0.5
+        maxMove -= 0.5
         spawnTime -= 0.1
-        
-        print(minMove)
-        print(maxMove)
-        print(spawnTime)
-    }
-    
-    mutating func changeSpeed() {
         
         print(minMove)
         print(maxMove)

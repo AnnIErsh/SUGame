@@ -33,7 +33,7 @@ public class DataService: IDataService {
                 fatalError("Unresolved error")
             }
         }
-        print("data saved")
+        //print("data saved")
     }
     
     public func encodeData<T: Codable>(type: T.Type, withData data: T?) -> Data? {

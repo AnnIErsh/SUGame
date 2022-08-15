@@ -13,7 +13,17 @@ public struct TextStyle: ViewModifier {
     
     public func body(content: Content) -> some View {
         content
-            .font(.custom(font3.0, size: font3.1))
+            .font(.custom(font1.0, size: font3.1))
             .foregroundColor(color4)
+    }
+}
+
+public struct TextStyleSmall: ViewModifier {
+    public init() {}
+    
+    public func body(content: Content) -> some View {
+        content
+            .font(.custom(font3.0, size: 40))
+            .foregroundColor(color3)
     }
 }

@@ -11,7 +11,8 @@ import UI
 
 struct InstructionScreen: View {
     @EnvironmentObject var route: NavigationViewModel
-    @State var selected: Mode = .play
+    @EnvironmentObject var actionViewModel: ActionViewModel
+
     var body: some View {
         ZStack {
             Color.colors[2]
@@ -23,7 +24,6 @@ struct InstructionScreen: View {
                 Text("🗑").modifier(TextStyle())
                     .multilineTextAlignment(.center)
                 Button("Start") {
-                    route.pop()
                     route.push(screeView: GameScreen().lazy.toAnyView())
                 }
                 .buttonStyle(ButtonStyles())

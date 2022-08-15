@@ -9,20 +9,18 @@ import Foundation
 import SwiftUI
 
 final class TypeViewModel: ObservableObject {
-    @Published var head: Mode = .play
-    
-    var mode: Mode {
-        get { head }
-        set { head = newValue }
-    }
+//    @Published var head: Mode = .play
+//
+//    var mode: Mode {
+//        get { head }
+//        set { head = newValue }
+//    }
     
     @ViewBuilder
     func makeScreen(_ type: Mode) -> some View {
         switch type {
-        case .intro:
-            InstructionScreen()
         case .play:
-            GameScreen()
+            InstructionScreen()
         case .result:
             ResultScreen()
         case .info:

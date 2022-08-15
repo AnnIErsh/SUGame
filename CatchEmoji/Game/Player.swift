@@ -17,7 +17,7 @@ class Player: SKSpriteNode {
     }
     
     var label = SKLabelNode()
-    private let basket = SKLabelNode(text: "🗑")
+    let basket = SKLabelNode(text: "🗑")
  
     func prepare(area: CGSize) {
         self.position = CGPoint(x: area.width * 0.5 , y: area.height * 0.1)

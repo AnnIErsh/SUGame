@@ -10,6 +10,15 @@ import SpriteKit
 import SwiftUI
 
 class GameScene: SKScene {
+    var change: ((Bool) -> Void)?
+    var gamePaused: ((Bool) -> Void)?
+    
+    var reset: Bool? {
+        didSet {
+            print("reset game")
+        }
+    }
+    
     @Categories var categories
     var allEmojies: [Emoji]?
     
@@ -33,9 +42,10 @@ class GameScene: SKScene {
                 failNode.text?.append("♡")
                 speedTime.speedScore += 0.1
             }
-            if count % 5 == 0 {
+            if count % 10 == 0 {
                 removeChildren(in: group)
-                waiting = 3
+                waiting = 5
+                print("pause, do some animations")
             }
             else {
                 waiting = 0
@@ -46,11 +56,14 @@ class GameScene: SKScene {
     var failed: Int = 0 {
         didSet {
             if failNode.text == "" {
-                removeAllActions()
                 print("GAME OVER")
+                removeAllActions()
+                removeChildren(in: group)
+                change?(true)
             }
             else {
                 failNode.text?.removeLast()
+                change?(false)
             }
         }
     }
@@ -127,7 +140,6 @@ class GameScene: SKScene {
         let point = CGPoint(x: x, y: area.height)
         emj.position = point
         emj.physicsBody = SKPhysicsBody(rectangleOf: emj.size)
-        //emj.physicsBody?.node?.speed = speedTime.
         emj.prepareEmoji(emoji: emoji)
         addChild(emj)
         emj.handleContact()
@@ -139,20 +151,20 @@ class GameScene: SKScene {
         group.append(emj)
     }
     
-    private func doActions() {
+    func doActions() {
         run(SKAction.repeatForever(
             SKAction.sequence([
                 SKAction.run(emojiSpawn),
                 SKAction.wait(forDuration: speedTime.spawnTime),
                 SKAction.wait(forDuration: waiting)
             ])
-        ))
+        ), withKey: "spawning")
         run(SKAction.repeatForever(
             SKAction.sequence([
                 SKAction.run(handleGroup),
                 SKAction.wait(forDuration: speedTime.categoryTime)
             ])
-        ))
+        ), withKey: "categoring")
     }
     
     func random() -> CGFloat {

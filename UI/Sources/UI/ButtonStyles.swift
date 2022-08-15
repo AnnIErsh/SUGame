@@ -12,7 +12,7 @@ public struct ButtonStyles: ButtonStyle {
     public init() {}
     
     public func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
+        return configuration.label
             .font(.custom(font1.0, size: font1.1))
             .foregroundColor(!configuration.isPressed ? color4 : .green)
     }

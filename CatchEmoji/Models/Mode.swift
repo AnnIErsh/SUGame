@@ -9,14 +9,13 @@ import Foundation
 
 enum Mode: String, CaseIterable {
     case result = "Results"
-    case play = "Play"
+    case play = "New Game"
     case info = "Info"
-    case intro = "Intro"
 }
 
 @propertyWrapper
 struct Modes {
     var wrappedValue: [Mode] {
-        return Mode.allCases.dropLast()
+        return Mode.allCases
     }
 }

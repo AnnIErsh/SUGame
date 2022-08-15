@@ -13,6 +13,7 @@ import UI
 struct MenuScreen: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var route: NavigationViewModel
+    @EnvironmentObject var actionViewModel: ActionViewModel
     @Binding var selected: Mode
     @State private var selectedRow: Int?
     @Modes private var modes
@@ -32,13 +33,13 @@ struct MenuScreen: View {
                     .opacity(
                         selectedRow == i ? 0.1 : 1
                     )
-                    //.frame(maxWidth: .infinity)
                     .padding()
                 }
                 Button("Dismiss") {
                     presentationMode.wrappedValue.dismiss()
+                    actionViewModel.gameIsActive()
                 }
-                .modifier(TextStyle())
+                .modifier(TextStyleSmall())
                 .padding()
             }
         }

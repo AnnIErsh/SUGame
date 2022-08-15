@@ -7,13 +7,17 @@
 
 import SwiftUI
 import SpriteKit
+import Navigation
 
 struct GameScreen: View {
     @EnvironmentObject var emojiViewModel: EmojiViewModel
+    @EnvironmentObject var route: NavigationViewModel
+    @EnvironmentObject var actionViewModel: ActionViewModel
+    @State var isOver: Bool = false
+    @State var isPaused: Bool = false
     
     private var gameScene: GameScene = {
         let scene = GameScene(size: UIScreen.main.bounds.size)
-        //IColor(Color(hex: 0xd8cee6))
         let color = UIColor.white
         scene.backgroundColor = color
         return scene
@@ -27,6 +31,7 @@ struct GameScreen: View {
     var body: some View {
         ZStack {
             sprite
+                .showMenu(isPresented: $isOver, selected: nil, screen: GameOverScreen().lazy.toAnyView)
         }.background(alignment: .top) {
             Rectangle()
                 .fill(Color.clear)
@@ -36,5 +41,17 @@ struct GameScreen: View {
     
     var sprite: some View {
         SpriteView(scene: scene)
+            .onAppear {
+                gameScene.change = { i in
+                    if i {
+                        gameScene.reset = true
+                        isOver = true
+                    }
+                    else {
+                        isOver = false
+                    }
+                }
+                actionViewModel.scene = gameScene
+            }
     }
 }

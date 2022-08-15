@@ -9,9 +9,7 @@ import Foundation
 import SpriteKit
 
 extension GameScene: SKPhysicsContactDelegate {
-    
     func didBegin(_ contact: SKPhysicsContact) {
-        // 1
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
@@ -21,7 +19,6 @@ extension GameScene: SKPhysicsContactDelegate {
             firstBody = contact.bodyB
             secondBody = contact.bodyA
         }
-
         if ((firstBody.categoryBitMask & Contact.object != 0) &&
             (secondBody.categoryBitMask & Contact.projectile != 0)) {
             if let ball = firstBody.node as? EmojiObj,

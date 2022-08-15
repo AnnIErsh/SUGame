@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ScreenMaker: View {
     @Binding var selected: Mode
-    @ObservedObject var type = TypeViewModel()
+    var type = TypeViewModel()
 
     var screen: AnyView {
         get { type.makeScreen(selected).lazy.toAnyView() }
