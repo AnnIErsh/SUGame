@@ -9,7 +9,7 @@ import SwiftUI
 import UI
 
 struct ResultScreen: View {
-    @ObservedObject var playerViewModel = PlayerViewModel()
+    @EnvironmentObject var playerViewModel: PlayerViewModel
     
     var body: some View {
         ZStack {
@@ -22,7 +22,7 @@ struct ResultScreen: View {
                     Section("Date") {
                         ForEach(playerViewModel.results ?? []) { i in
                             HStack {
-                                Text(i.date, style: .date)
+                                Text("\(i.date)")
                                 Spacer()
                                 Text("\(i.score)")
                             }
@@ -33,6 +33,9 @@ struct ResultScreen: View {
                 .modifier(ListStyle())
                 .listStyle(.plain)
                 .padding()
+                .onAppear {
+                    playerViewModel.getScoreFromData()
+                }
             }
         }
     }

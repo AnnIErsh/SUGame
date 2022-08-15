@@ -15,6 +15,7 @@ struct ContentView: View {
     @ObservedObject var emojiViewModel: EmojiViewModel = .init()
     @ObservedObject var route: NavigationViewModel = .init()
     @ObservedObject var actionViewModel: ActionViewModel = .init()
+    @ObservedObject var playerViewModel: PlayerViewModel = .init()
     
     var body: some View {
         ZStack(alignment: .topTrailing, content: {
@@ -22,6 +23,7 @@ struct ContentView: View {
         })
         .environmentObject(route)
         .environmentObject(actionViewModel)
+        .environmentObject(playerViewModel)
     }
     
     @ViewBuilder var content: some View {
@@ -31,6 +33,7 @@ struct ContentView: View {
         }
         .onAppear {
             emojiViewModel.prepareData()
+            playerViewModel.getScoreFromData()
         }
         .environmentObject(emojiViewModel)
         Button("Menu") {

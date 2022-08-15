@@ -14,7 +14,6 @@ final class ActionViewModel: ObservableObject {
     var gameIsPaused: (() -> Void) {
         get {
             return {
-                print("game is on pause")
                 self.scene?.isPaused = true
             }
         }
@@ -23,7 +22,6 @@ final class ActionViewModel: ObservableObject {
     var gameIsActive: (() -> Void) {
         get {
             return {
-                print("game is continuing")
                 self.scene?.isPaused = false
             }
         }

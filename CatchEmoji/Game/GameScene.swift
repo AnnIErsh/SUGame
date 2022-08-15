@@ -199,7 +199,6 @@ class GameScene: SKScene {
     }
 }
 
-//
 //if let sound = sound {
 //    let backgroundMusic = SKAudioNode(url: sound)
 //    backgroundMusic.autoplayLooped = true

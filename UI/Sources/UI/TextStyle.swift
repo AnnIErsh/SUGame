@@ -27,3 +27,14 @@ public struct TextStyleSmall: ViewModifier {
             .foregroundColor(color3)
     }
 }
+
+public struct TextRules: ViewModifier {
+    public init() {}
+    
+    public func body(content: Content) -> some View {
+        content
+            .font(.custom(font3.0, size: .minimum(20, 20)))
+            .foregroundColor(color4)
+            .multilineTextAlignment(.center)
+    }
+}
