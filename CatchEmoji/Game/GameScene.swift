@@ -187,7 +187,6 @@ class GameScene: SKScene {
         object.removeFromParent()
     }
     
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         player.handleContact()
     }

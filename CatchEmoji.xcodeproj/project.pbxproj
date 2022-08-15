@@ -138,8 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				E7E6E43228AAA01900778F01 /* ScoreData */,
-				E7E6E42E28AA9FD500778F01 /* Score+CoreDataClass.swift */,
-				E7E6E42F28AA9FD500778F01 /* Score+CoreDataProperties.swift */,
 				E784D46A28A2F8C100A35937 /* CoreData */,
 				E7E3CDA528A07FB20095F07A /* Packages */,
 				E7E3CD6928A06AB30095F07A /* CatchEmoji */,
@@ -288,6 +286,8 @@
 		E7E6E43228AAA01900778F01 /* ScoreData */ = {
 			isa = PBXGroup;
 			children = (
+				E7E6E42E28AA9FD500778F01 /* Score+CoreDataClass.swift */,
+				E7E6E42F28AA9FD500778F01 /* Score+CoreDataProperties.swift */,
 			);
 			path = ScoreData;
 			sourceTree = "<group>";
