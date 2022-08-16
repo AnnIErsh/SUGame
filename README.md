@@ -17,7 +17,7 @@ Project is created with:
 * Sources: EmojiHub free Public Api
 	
 ## Flow
-Try to catch emoticons in the right category\
+Try to catch emojis in the right category\
 Avoid collisions with wrong objects\
 Level up your score
 
