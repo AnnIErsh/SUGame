@@ -14,7 +14,7 @@ This project is a simple attention game to kill time
 Project is created with:
 * SwiftUI
 * SpriteKit
-* MVVM
+* MVVM/SOA/DI
 * Sources: EmojiHub free Public Api
 	
 ## Flow
