@@ -14,7 +14,7 @@ final class EmojiViewModel: ObservableObject {
     @Injected var data: DataService?
     @Published var allEmojies: [Emoji]?
 
-    private let url = URL(stringLiteral: "https://emojihub.herokuapp.com/api/all")
+    private let url = URL(stringLiteral: "https://emojihub.yurace.pro/api/all")
     
     private func fetchRequest() {
         Task.detached(priority: .utility) { [self] in
